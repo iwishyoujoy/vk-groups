@@ -13,6 +13,6 @@ root.render(
         <AdaptivityProvider>
           <App />
         </AdaptivityProvider>
-      </ConfigProvider>,
+      </ConfigProvider>
   </React.StrictMode>
 );

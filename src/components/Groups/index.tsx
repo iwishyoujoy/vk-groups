@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { Div, Footer, Group, PanelSpinner, Separator, Spacing } from "@vkontakte/vkui";
+import { Div, Group, PanelSpinner, Separator, Spacing } from "@vkontakte/vkui";
 import { Icon16ErrorCircle } from "@vkontakte/icons";
 
 import { GroupsItem } from "./GroupsItem";
 import { useGroups } from "../../redux/groupsContext";
 import { simulateBackend } from "../../utils/backend";
-import { CounterType, formatCounterText } from "../../utils/text";
 import styles from './styles.module.css';
 
 interface IGroupsProps {

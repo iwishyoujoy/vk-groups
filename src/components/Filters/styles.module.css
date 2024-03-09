@@ -6,3 +6,9 @@
     row-gap: 5px;
     width: 252px;
 }
+
+@media (max-width: 768px) {
+    .filters {
+        width: calc(100vw - 24px);
+    }
+}

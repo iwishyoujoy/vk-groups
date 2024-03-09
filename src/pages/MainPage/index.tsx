@@ -1,4 +1,4 @@
-import { PanelHeader, Group, Footer } from "@vkontakte/vkui"
+import { PanelHeader, Footer } from "@vkontakte/vkui"
 
 import { Wrapper } from "../../components/Wrapper";
 import { Filters } from "../../components/Filters";
