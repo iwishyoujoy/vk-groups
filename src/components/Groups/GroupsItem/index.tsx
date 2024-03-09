@@ -64,7 +64,7 @@ export const GroupsItem: React.FC<IGroupsItemProps> = (props) => {
                                             {friends.map((friend) => {
                                                 return (<div className={styles.friend}>
                                                     <Avatar className={styles.photo} src={userAvatar}/>
-                                                    <span className={styles.name}>{friend.first_name} <br /> {friend.last_name}</span>
+                                                    <span>{friend.first_name} <br /> {friend.last_name}</span>
                                                 </div>)
                                             })}
                                         </div>
