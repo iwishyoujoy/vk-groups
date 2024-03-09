@@ -6,11 +6,12 @@
         ". footer";
     column-gap: 10px;
 }
-/* TODO: допилить, чтобы фильтры были на месте и не уезжали */
+
 .filters{
     grid-area: filters;
     height: 310px;
-    position: sticky;
+    position: sticky !important;
+    top: 58px; 
 }
 
 .content{
