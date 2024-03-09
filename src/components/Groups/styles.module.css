@@ -1,0 +1,7 @@
+.group {
+    height: 110px;
+}
+
+.separator:last-child {
+    display: none;
+}

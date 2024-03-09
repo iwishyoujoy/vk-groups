@@ -7,6 +7,8 @@
 /* TODO: допилить, чтобы фильтры были на месте и не уезжали */
 .filters{
     grid-area: filters;
+    height: 310px;
+    position: sticky;
 }
 
 .content{
