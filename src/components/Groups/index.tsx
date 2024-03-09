@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import cn from 'classnames';
 import { Div, Footer, Group, PanelSpinner, Separator, Spacing } from "@vkontakte/vkui";
 import { Icon16ErrorCircle } from "@vkontakte/icons";
 
@@ -51,24 +50,21 @@ export const Groups: React.FC<IGroupsProps> = ({className}) => {
     }
 
     return (
-      <div className={className}>
-        <Group className={isLoading || isError ? styles.errorContainer: ""}>
-          <Div>
-              {isLoading ? (
-                  <PanelSpinner className={styles.spinner}>Загрузка данных...</PanelSpinner>
-              ) : (
-                  groups.map((group) => (
-                      <>
-                          <GroupsItem className={styles.group} key={group.id} avatarColor={group.avatar_color} title={group.name} counter={group.members_count} friends={group.friends} closed={group.closed}/>
-                          <Spacing size={20} className={styles.separator}>
-                              <Separator wide/>
-                          </Spacing>
-                      </>
-                  ))
-              )}
-          </Div>
-        </Group>
-        {!isLoading && !isError && <Footer>{formatCounterText(groups.length, CounterType.GROUPS)}</Footer>}
-      </div>
+      <Group className={className}>
+        <Div>
+          {isLoading ? (
+            <PanelSpinner className={styles.spinner}>Загрузка данных...</PanelSpinner>
+          ) : (
+            groups.map((group) => (
+              <>
+                <GroupsItem className={styles.group} key={group.id} avatarColor={group.avatar_color} title={group.name} counter={group.members_count} friends={group.friends} closed={group.closed}/>
+                <Spacing size={20} className={styles.separator}>
+                  <Separator wide/>
+                </Spacing>
+              </>
+            ))
+          )}
+        </Div>
+      </Group>
     );
 };
