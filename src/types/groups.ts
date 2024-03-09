@@ -1,4 +1,4 @@
-interface GetGroupsResponse {
+export interface GetGroupsResponse {
     result: 1 | 0,
     data?: Group[]
 }

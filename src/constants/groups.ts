@@ -1,4 +1,6 @@
-[
+import { Group } from "../types/groups"
+
+export const data: Group[] = [
     {
       "id": 1,
       "name": "Котики",
