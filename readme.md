@@ -13,3 +13,7 @@
 - Github Pages (для деплоя)
 
 ## Скриншоты
+![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/4c8d4995-b6f6-4b33-89ac-db03609dfc2f)
+![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/83751fc1-cbbc-4368-96b8-475becfc6edf)
+![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/12b2c302-56b0-4b68-b56a-5ca85b1cc6ad)
+![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/fb13fc68-2143-4f84-92be-56d608d57a32)
