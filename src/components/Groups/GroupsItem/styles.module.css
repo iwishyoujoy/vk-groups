@@ -16,6 +16,43 @@
 }
 
 .whiteAvatar { 
-    /* background: rgb(255,255,255); */
-    background-image: linear-gradient(315deg, #D1D1D1, #FFFFFF 50%);
+    background-image: linear-gradient(315deg, #D1D1D1, #FFFFFF 40%);
+}
+
+.link {
+    color: var(--text-secondary);
+}
+
+.friendsContainer {
+    padding: 8px 14px;
+    border-radius: var(--border-radius);
+    background-color: var(--popover-color);
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+
+.friend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 5px;
+
+    text-align: center;
+    font-size: var(--font-size-s);
+}
+
+.photo {
+    height: 30px;
+    width: 30px;
+}
+
+.name {
+    max-width: 70px;
 }
