@@ -1,5 +1,5 @@
 import { CustomSelect, Text } from "@vkontakte/vkui"
-import { IOptions } from "@src/types/options";
+import { IOptions } from "@/types/options";
 
 interface IFilterProps {
     className?: string;

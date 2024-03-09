@@ -1,4 +1,4 @@
-import { IOptions } from "@src/types/options";
+import { IOptions } from "../types/options";
 
 export const privacyOptions: IOptions[] = [
     {
