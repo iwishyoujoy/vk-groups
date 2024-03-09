@@ -22,7 +22,7 @@ export const GroupsItem: React.FC<IGroupsItemProps> = (props) => {
     return (
         <RichCell 
             className={className}
-            before={<Avatar size={72} src={userAvatar} />}
+            before={<Avatar size={100} src={userAvatar} />}
             text={closed ? "Закрытое сообщество" : "Открытое сообщество"}
             bottom={
                 <>
