@@ -1,6 +1,10 @@
 :root{
   --label-color: #6a7480;
   --divider-color: #dce1e6;
+  --group-background-color: #e6edf4;
+  --group-icon-color: #9bb2cc;
+
+  --border-color: rgba(0,0,0,.08);
 }
 
 .filterLabel {

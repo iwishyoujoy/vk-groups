@@ -1,4 +1,5 @@
 import { RichCell, UsersStack, Avatar, Button } from '@vkontakte/vkui';
+import { Icon36Users } from '@vkontakte/icons';
 
 import userAvatar from '../../../images/user.jpeg';
 import { User } from '../../../types/groups';
@@ -14,15 +15,39 @@ interface IGroupsItemProps {
     friends?: User[];
 }
 
+type AvatarColorMap = {
+    [key: string]: 1 | 2 | 3 | 4 | 5 | 6 | "custom";
+}
+
+const avatarColorMap: AvatarColorMap = {
+    "red": 1,
+    "orange": 2,
+    "yellow": 3,
+    "green": 4,
+    "blue": 5,
+    "purple": 6,
+    "white": "custom"
+}
+
 export const GroupsItem: React.FC<IGroupsItemProps> = (props) => {
     const { className, avatarColor,  title, closed, counter, friends = []} = props; 
 
     const friendsAvatars = friends.map(() => userAvatar);
+    const gradientColor = avatarColor ? avatarColorMap[avatarColor] : undefined;
 
     return (
         <RichCell 
             className={className}
-            before={<Avatar size={100} src={userAvatar} />}
+            before={gradientColor ? 
+                <Avatar 
+                    size={100} 
+                    gradientColor={gradientColor} 
+                    className={avatarColor === "white" ? styles.whiteAvatar : undefined}
+                /> 
+                : 
+                <div className={styles.noAvatar}>
+                    <Icon36Users fill="#9bb2cc" height={60} width={60}/>
+                </div>}
             text={closed ? "Закрытое сообщество" : "Открытое сообщество"}
             bottom={
                 <>

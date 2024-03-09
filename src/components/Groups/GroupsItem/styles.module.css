@@ -1,3 +1,21 @@
 .subscribers{
     margin-left: -8px;
 }
+
+.noAvatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: var(--group-background-color);
+    border: 1px solid var(--border-color);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.whiteAvatar { 
+    /* background: rgb(255,255,255); */
+    background-image: linear-gradient(315deg, #D1D1D1, #FFFFFF 50%);
+}
