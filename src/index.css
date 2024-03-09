@@ -1,8 +1,8 @@
 :root{
   --label-color: #6a7480;
+  --divider-color: #dce1e6;
 }
 
 .filterLabel {
-  font-weight: 600;
   color: var(--label-color);
 }

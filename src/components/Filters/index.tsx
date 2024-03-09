@@ -1,49 +1,32 @@
-import { CustomSelect, Div, Group, Text } from "@vkontakte/vkui"
-import { useState } from "react";
+import { Div, Group, Separator, Spacing } from "@vkontakte/vkui"
 
-const options = [
-    {
-        label: 'Красный',
-        value: 'red'
-    },
-    {
-        label: 'Зеленый',
-        value: 'green'
-    }, 
-    {
-        label: 'Желтый',
-        value: 'yellow'
-    }, 
-    {
-        label: 'Синий', 
-        value: 'blue'
-    }, 
-    {
-        label: 'Фиолетовый',
-        value: 'purple'
-    }, 
-    {
-        label: 'Белый',
-        value: 'white'
-    }, 
-    {
-        label: 'Оранжевый',
-        value: 'orange'
-    }
-];
+import { privacyOptions, colorOptions } from '../../constants/options';
+
+import styles from './styles.module.css';
+import { FilterItem } from "./FiltersItem";
+import { FiltersCheckbox } from "./FiltersCheckbox";
 
 interface IFilterProps {
     className?: string;
 }
 
 export const Filters: React.FC<IFilterProps> = ({className}) => {
-    const [colorOptions, setColorOptions] = useState(options);
-
     return (
         <Group className={className}>
-            <Div>
-                <Text className="filterLabel">Цвет аватарки</Text>
-                <CustomSelect searchable={true} options={colorOptions}></CustomSelect>
+            <Div className={styles.filters}>
+                <FilterItem options={colorOptions} text="Цвет аватарки" placeholder="Выберите цвет" />
+
+                <Spacing size={20}>
+                    <Separator wide/>
+                </Spacing>
+
+                <FilterItem options={privacyOptions} text="Тип приватности" placeholder="Выберите тип приватности" />
+
+                <Spacing size={20}>
+                    <Separator wide/>
+                </Spacing>
+
+                <FiltersCheckbox title="Мои друзья" text="Мои друзья состоят в группе"/>
             </Div>
         </Group>
     )
