@@ -28,3 +28,10 @@
     width: 350px;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .spinner, .error {
+        margin-top: 10px;
+        align-self: center;
+    }
+}

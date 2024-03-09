@@ -22,7 +22,7 @@ export const MainPage = () => {
     return (
         <>
             <PanelHeader>VK сообщества</PanelHeader>
-            <Wrapper>
+            <Wrapper className={styles.wrapper}>
                 <div className={styles.container}>
                     <Filters className={styles.filters}/>
                     <Groups className={styles.content}/>
