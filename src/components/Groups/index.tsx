@@ -4,6 +4,7 @@ import { Icon16ErrorCircle } from "@vkontakte/icons";
 
 import { GroupsItem } from "./GroupsItem";
 import { useGroups } from "../../redux/groupsContext";
+import { useFilters } from "../../redux/filtersContext";
 import { simulateBackend } from "../../utils/backend";
 import styles from './styles.module.css';
 
@@ -13,6 +14,8 @@ interface IGroupsProps {
 
 export const Groups: React.FC<IGroupsProps> = ({className}) => {
     const { groups, setGroups } = useGroups();
+    const { filters } = useFilters();
+
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
 
@@ -33,9 +36,14 @@ export const Groups: React.FC<IGroupsProps> = ({className}) => {
           setIsLoading(false);
         }
       };
-
         fetchData();
     }, [setGroups]);
+
+    const filteredGroups = groups.filter((group) => {
+      return (!filters.color || filters.color === 'all' || group.avatar_color === filters.color) &&
+      (!filters.privacy || filters.privacy === 'all' || (group.closed && filters.privacy === 'closed') || (!group.closed && filters.privacy === 'opened')) &&
+      (!filters.friends || (group.friends?.length ?? 0));
+    })
 
     if (isError || (!isLoading && groups.length < 1)){
       return (
@@ -54,10 +62,10 @@ export const Groups: React.FC<IGroupsProps> = ({className}) => {
           {isLoading ? (
             <PanelSpinner className={styles.spinner}>Загрузка данных...</PanelSpinner>
           ) : (
-            groups.map((group) => (
+            filteredGroups.map((group, index) => (
               <>
                 <GroupsItem className={styles.group} key={group.id} avatarColor={group.avatar_color} title={group.name} counter={group.members_count} friends={group.friends} closed={group.closed}/>
-                <Spacing size={20} className={styles.separator}>
+                <Spacing key={index} size={20} className={styles.separator}>
                   <Separator wide/>
                 </Spacing>
               </>

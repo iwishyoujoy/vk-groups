@@ -17,6 +17,10 @@ export const privacyOptions: IOptions[] = [
 
 export const colorOptions: IOptions[] = [
     {
+        label: 'Любой',
+        value: 'all'
+    },
+    {
         label: 'Красный',
         value: 'red'
     },
