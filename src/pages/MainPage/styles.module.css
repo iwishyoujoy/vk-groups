@@ -1,15 +1,14 @@
 .container{
     display: grid;
     grid-template-columns: 300px 600px;
+    grid-template-areas: "filters content";
     column-gap: 10px;
 }
-
+/* TODO: допилить, чтобы фильтры были на месте и не уезжали */
 .filters{
-    grid-column-start: 1;
-    grid-row-start: 1;
+    grid-area: filters;
 }
 
 .content{
-    grid-column-start: 2;
-    grid-row-start: 1;
+    grid-area: content
 }
