@@ -4,6 +4,7 @@ interface Filters {
     color?: string;
     privacy?: string;
     friends?: boolean;
+    sortBy?: string;
 }
 
 interface FiltersContextData {

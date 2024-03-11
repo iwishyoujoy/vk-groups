@@ -7,15 +7,16 @@ interface IFilterProps {
     text: string;
     placeholder?: string;
     onChange?: React.ChangeEventHandler<HTMLSelectElement>;
+    searchable?: boolean;
 }
 
 export const FilterItem: React.FC<IFilterProps> = (props) => {
-    const {className, options, text, placeholder, onChange} = props;
+    const {className, options, text, placeholder, onChange, searchable = true} = props;
 
     return (
         <div className={className}>
             <Text className="filterLabel" weight="1" style={{paddingBottom: "13px", marginTop: "6px"}}>{text}</Text>
-            <CustomSelect searchable={true} options={options} placeholder={placeholder} onChange={onChange}/>
+            <CustomSelect searchable={searchable} options={options} placeholder={placeholder} onChange={onChange}/>
         </div>
     )
 }

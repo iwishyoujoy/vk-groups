@@ -50,3 +50,19 @@ export const colorOptions: IOptions[] = [
     }
 ];
 
+export const sortOptions: IOptions[] = [
+    {
+        label: "По названию",
+        value: "name"
+    },
+    {
+        label: "По количеству подписчиков",
+        value: "subscribers"
+    },
+    {
+        label: "По релевантности",
+        value: "friends"
+    }
+]
+
+

@@ -9,7 +9,7 @@
 
 .filters{
     grid-area: filters;
-    height: 310px;
+    height: 410px;
     position: sticky !important;
     top: 58px; 
 }
@@ -33,16 +33,13 @@
     }
 
     .filters {
-        /* width: calc(100% - 24px); */
         position: relative !important;
         top: 0;
     }
 
     .content, .footer{
-        /* width: calc(100vw - 24px); */
         width: 100%;
         align-self: center;
-        /* margin-left: 10px; */
     }
 
     .footer {

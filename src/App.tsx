@@ -11,11 +11,11 @@ export default function App() {
 
   return (
     <AppRoot>
-      <GroupsProvider>
-        <FiltersProvider>
+      <FiltersProvider>
+        <GroupsProvider>
           <MainPage />
-        </FiltersProvider>
-      </GroupsProvider>
+        </GroupsProvider>
+      </FiltersProvider>
     </AppRoot>
   );
 };

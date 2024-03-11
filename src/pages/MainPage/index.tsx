@@ -5,19 +5,11 @@ import { Filters } from "../../components/Filters";
 import { Groups } from "../../components/Groups";
 import { formatCounterText, CounterType } from "../../utils/text";
 import { useGroups } from "../../redux/groupsContext";
-import { useFilters } from "../../redux/filtersContext";
 
 import styles from './styles.module.css';
 
 export const MainPage = () => {
-    const { groups } = useGroups();
-    const { filters } = useFilters();
-
-    const filteredGroups = groups.filter((group) => {
-        return (!filters.color || filters.color === 'all' || group.avatar_color === filters.color) &&
-        (!filters.privacy || filters.privacy === 'all' || (group.closed && filters.privacy === 'closed') || (!group.closed && filters.privacy === 'opened')) &&
-        (!filters.friends || (group.friends?.length ?? 0));
-    })
+    const { filteredGroups } = useGroups();
 
     return (
         <>
