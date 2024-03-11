@@ -20,7 +20,6 @@ export const Filters: React.FC<IFilterProps> = ({className}) => {
         const newColor = event.currentTarget.value;
         setFilters({...filters, color: newColor});
         const filteredGroups = filterGroups(newColor, filters.privacy, filters.friends);
-        console.log(filteredGroups);
         sortGroups(filters.sortBy, filteredGroups);
     }
 
@@ -61,9 +60,7 @@ export const Filters: React.FC<IFilterProps> = ({className}) => {
                 sortedGroups.sort((a, b) => b.members_count - a.members_count);
                 break;
         }
-        console.log(sortBy);
         setFilteredGroups(sortedGroups);
-        console.log(sortedGroups);
     }
 
     const handleSortChange = (event: React.FormEvent<HTMLSelectElement>) => {
