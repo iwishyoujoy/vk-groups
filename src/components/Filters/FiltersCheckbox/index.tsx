@@ -1,7 +1,6 @@
 import { Text, Checkbox } from "@vkontakte/vkui"
 
 import styles from './styles.module.css';
-import { useFilters } from "../../../redux/filtersContext";
 
 interface IFiltersCheckboxProps {
     className?: string;
@@ -15,7 +14,6 @@ interface IFiltersCheckboxProps {
 
 export const FiltersCheckbox: React.FC<IFiltersCheckboxProps> = (props) => {
     const { className, text, title, defaultChecked = false, hasHover = false, hasActive = false, onChange } = props;
-    const { filters } = useFilters();
 
     return (
         <div className={className}>
