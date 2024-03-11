@@ -1,6 +1,8 @@
 # Тестовое задание - отбор на стажировку в команду ВК сообществ
 
-Приложение на React с имитацией бекенда (реализовано рандомное выпадение ошибки (также может быть пустой ответ) и задержка ответа - 1 секунда), в котором можно посмотреть список сообществ, **отфильтровать** их по:
+### [Развернутое приложение на Github Pages](https://iwishyoujoy.github.io/vk-groups/)
+
+Приложение на React с имитацией бекенда, в котором можно посмотреть список сообществ, **отфильтровать** их по:
 - цвету аватарки
 - типу приватности
 - наличию в нем ваших друзей *(если навести курсор на количество друзей, откроются полные имена и аватарки, на мобильном устройстве то же самое по тапу)*
@@ -17,8 +19,13 @@
 - React Context (для хранения данных)
 - Github Pages (для деплоя)
 
+## Еще реализовано:
+- Мобильная адаптивная верстка
+- Имитация бекенда, которая включает в себя задержку ответа 1 секунда, рандомное выпадение ошибок (ошибка ответа бекенда и возвращение пустого результата)
+
 ## Скриншоты
-![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/4c8d4995-b6f6-4b33-89ac-db03609dfc2f)
-![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/83751fc1-cbbc-4368-96b8-475becfc6edf)
-![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/12b2c302-56b0-4b68-b56a-5ca85b1cc6ad)
-![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/fb13fc68-2143-4f84-92be-56d608d57a32)
+![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/7dc1ca72-eaff-49c0-9103-4e734eeded76)
+![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/d153c6f1-6245-4dce-837f-054ae53c1305)
+![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/8c89bb5b-660f-4d62-9861-29767c358f2f)
+![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/aff1b5d7-7fe0-4c76-afd4-5579c11317ab)
+![image](https://github.com/iwishyoujoy/vk-groups/assets/92114723/0ae42853-b439-4035-830b-450349e7bbbf)
