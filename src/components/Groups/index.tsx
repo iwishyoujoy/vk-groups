@@ -2,7 +2,7 @@ import { Div, Group, PanelSpinner, Separator, Spacing } from "@vkontakte/vkui";
 import { Icon16ErrorCircle } from "@vkontakte/icons";
 
 import { GroupsItem } from "./GroupsItem";
-import { useGroups } from "../../redux/groupsContext";
+import { useGroups } from "../../storage/groupsContext";
 
 import styles from './styles.module.css';
 

@@ -4,8 +4,8 @@ import {
 import '@vkontakte/vkui/dist/vkui.css';
 
 import { MainPage } from "./pages/MainPage";
-import { GroupsProvider } from "./redux/groupsContext";
-import { FiltersProvider } from "./redux/filtersContext";
+import { GroupsProvider } from "./storage/groupsContext";
+import { FiltersProvider } from "./storage/filtersContext";
 
 export default function App() {
 

@@ -4,8 +4,8 @@ import { privacyOptions, colorOptions, sortOptions } from '../../constants/optio
 import { Group as GroupType } from '../../types/groups';
 import { FilterItem } from "./FiltersItem";
 import { FiltersCheckbox } from "./FiltersCheckbox";
-import { useFilters } from "../../redux/filtersContext";
-import { useGroups } from '../../redux/groupsContext';
+import { useFilters } from "../../storage/filtersContext";
+import { useGroups } from '../../storage/groupsContext';
 import styles from './styles.module.css';
 
 interface IFilterProps {

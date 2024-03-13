@@ -4,7 +4,7 @@ import { Wrapper } from "../../components/Wrapper";
 import { Filters } from "../../components/Filters";
 import { Groups } from "../../components/Groups";
 import { formatCounterText, CounterType } from "../../utils/text";
-import { useGroups } from "../../redux/groupsContext";
+import { useGroups } from "../../storage/groupsContext";
 
 import styles from './styles.module.css';
 
